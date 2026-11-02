@@ -4,13 +4,13 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-VERSION = "1"
+VERSION = "2"
 
 todos = []
 
 @app.get("/health")
 def health():
-    return jsonify(status="ok")
+    return jsonify(status="OK")
 
 @app.get("/version")
 def version():
