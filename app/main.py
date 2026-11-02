@@ -8,6 +8,10 @@ VERSION = "2"
 
 todos = []
 
+@app.get("/")
+def index():
+    return jsonify(app="todo-app", endpoints=["/health", "/version", "/todos"])
+
 @app.get("/health")
 def health():
     return jsonify(status="ok")
